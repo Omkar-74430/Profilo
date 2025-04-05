@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Khurd - Data Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #0466c8;
+            --secondary: #001845;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #0096c7;
+            --grey: #6c757d;
+            --light-grey: #e9ecef;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><rect x="25" y="25" width="50" height="50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-right: 40px;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .profile-text h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li a {
+            display: block;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav-links li a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links li a:hover::after {
+            width: 80%;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .key-skills {
+            flex: 0 0 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .key-skills h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .key-skills ul {
+            list-style: none;
+        }
+        
+        .key-skills ul li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .key-skills ul li::before {
+            content: "\f00c";
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        /* Experience Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--light-grey);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            background-color: inherit;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 22px;
+            right: -15px;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid white;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            top: 22px;
+            left: -15px;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid white;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            top: 22px;
+            width: max-content;
+            padding: 8px 16px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-date {
+            right: -180px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            left: -180px;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 30px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .timeline-content h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .timeline-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        
+        .timeline-content ul li {
+            margin-bottom: 8px;
+        }
+        
+        /* AI Tools & Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .ai-tool .project-image {
+            background: linear-gradient(45deg, #3a0ca3, #4361ee);
+        }
+        
+        .project .project-image {
+            background: linear-gradient(45deg, #2ec4b6, #3d5a80);
+        }
+        
+        .project-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .project-content {
+            padding: 25px;
+        }
+        
+        .project-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .project-content p {
+            color: var(--grey);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .tech-stack {
+            margin-top: 20px;
+        }
+        
+        .tech-stack h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tech-tag {
+            background-color: var(--light-grey);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--dark);
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .skills-category {
+            margin-bottom: 30px;
+        }
+        
+        .skills-category h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .skills-category h3 i {
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-icon {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .skill-name {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* Education Section */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .education-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .education-header {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            padding: 20px;
+            color: white;
+        }
+        
+        .education-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .education-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .education-content {
+            padding: 20px;
+        }
+        
+        .education-content p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .education-content p i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Certifications */
+        .certifications-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .certification-badge {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            max-width: 350px;
+        }
+        
+        .badge-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-grey);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .badge-icon i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .badge-text {
+            font-size: 0.95rem;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                display: none;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 19px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-date,
+            .timeline-item:nth-child(even) .timeline-date {
+                right: auto;
+                left: 70px;
+                top: -30px;
+                width: auto;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .key-skills {
+                flex: 0 0 100%;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                overflow-x: auto;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <img src="/api/placeholder/400/400" alt="Omkar Khurd" class="profile-image">
+            <div class="profile-text">
+                <h1>Omkar Sunil Khurd</h1>
+                <h2>Data Engineer</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 – 7387748890</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>omkarkhurd7620@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hyderabad, Telangana</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/omkar-khurd-98a631166</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#ai-tools">AI Tools</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Data Engineer with hands-on experience in SQL, Python, and Machine Learning. My expertise lies in data processing, analysis, and NoSQL databases, with a passion for continuous learning and innovation.</p>
+                    <p>Throughout my career, I've designed and implemented data pipelines, managed database systems, and leveraged cloud technologies to optimize data workflows. I'm particularly interested in applying AI and machine learning techniques to solve complex data challenges.</p>
+                    <p>My goal is to contribute to forward-thinking organizations by applying my strong problem-solving skills and technical expertise to drive data-driven decision-making and innovation.</p>
+                </div>
+                <div class="key-skills">
+                    <h3>Key Expertise</h3>
+                    <ul>
+                        <li>Data Pipeline Design & Implementation</li>
+                        <li>NoSQL Database Management</li>
+                        <li>Machine Learning & AI Integration</li>
+                        <li>Big Data Technologies</li>
+                        <li>Cloud Computing (AWS, Azure)</li>
+                        <li>Data Warehousing & ETL/ELT</li>
+                        <li>Data Analysis & Visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Engineer / Database Developer</h3>
+                        <h4>BostonLogix LLC, Hyderabad</h4>
+                        <div class="timeline-date">Mar 2024 - Present</div>
+                        <ul>
+                            <li>Worked on Oak Barrel product using MongoDB Atlas and Cassandra for efficient data management</li>
+                            <li>Designed and developed a chatbot for product information retrieval and user interaction</li>
+                            <li>Trained a custom Small Language Model (SLM) on proprietary datasets</li>
+                            <li>Implemented RAG approach for improved chatbot accuracy using embeddings and MongoDB</li>
+                            <li>Designed data pipelines with advanced modeling techniques for optimized workflows</li>
+                            <li>Utilized Snowflake for data warehousing with optimized storage and query performance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Engineer Intern</h3>
+                        <h4>Atos Syntel Pvt. Ltd, Pune</h4>
+                        <div class="timeline-date">Feb 2022 - 2023</div>
+                        <ul>
+                            <li>Designed and implemented data pipelines for efficient data storage and processing</li>
+                            <li>Built and maintained company's data infrastructure for accurate and timely data availability</li>
+                            <li>Ensured reliable delivery, loading, and transformation of data from multiple sources</li>
+                            <li>Collaborated with data analysts to design data pipelines aligned with business goals</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Paid Internship</h3>
+                        <h4>Internshala Pvt. Ltd, Delhi</h4>
+                        <div class="timeline-date">May 2020 - 2021</div>
+                        <ul>
+                            <li>Worked on Machine Learning projects</li>
+                            <li>Gained training in ML fundamentals including data exploration and preprocessing</li>
+                            <li>Developed skills in Linear Regression, Dimensionality Reduction, and other ML techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Tools Section -->
+    <section id="ai-tools">
+        <div class="container">
+            <h2 class="section-title">AI Tool Innovation</h2>
+            <div class="projects-grid">
+                <div class="project-card ai-tool">
+                    <div class="project-image">
+                        <i class="fas fa-search project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>ExtractAI – AI Search Engine</h3>
+                        <p>Built an AI-powered search engine similar to Perplexity, enabling intelligent question-answering and knowledge retrieval from structured and unstructured data.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">RAG</span>
+                                <span class="tech-tag">Ollama</span>
+                                <span class="tech-tag">DeepSeek R1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card ai-tool">
+                    <div class="project-image">
+                        <i class="fas fa-headset project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>BackCall Data Engineering</h3>
+                        <p>Developed an AI-based call transcription and analysis system to process conversational audio files and extract structured insights for customer service improvement.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Speech-to-Text ML</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card ai-tool">
+                    <div class="project-image">
+                        <i class="fas fa-robot project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Custom NoSQL AI Chatbot</h3>
+                        <p>Built a custom AI chatbot using embeddings to answer human-like queries based on MongoDB aggregation results without relying on pre-trained models.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Vector Embeddings</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">RAG</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card project">
+                    <div class="project-image">
+                        <i class="fas fa-tshirt project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Fabric Authentication System</h3>
+                        <p>Developed a deep learning system to distinguish between handmade and machine-made fabrics, essential for textile industry authentication.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Keras</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Matplotlib</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card project">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Stock Market Data Analysis</h3>
+                        <p>Analyzed and predicted stock market trends using historical data to guide investment decisions with machine learning models.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Numpy</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">PyTorch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card project">
+                    <div class="project-image">
+                        <i class="fas fa-baseball-ball project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Cricket Pipeline</h3>
+                        <p>Developed a fully automated data pipeline to extract cricket data from the web, process real-time streams, and generate AI-driven match summaries.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">BeautifulSoup</span>
+                                <span class="tech-tag">Apache Flink</span>
+                                <span class="tech-tag">Snowflake</span>
+                                <span class="tech-tag">Apache Airflow</span>
+                                <span class="tech-tag">SLM</span>
+                                <span class="tech-tag">Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python skill-icon"></i>
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">SQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">MQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-server"></i> Big Data Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">Hadoop</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt skill-icon"></i>
+                            <span class="skill-name">Spark</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-stream skill-icon"></i>
+                            <span class="skill-name">Flink</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wind skill-icon"></i>
+                            <span class="skill-name">Airflow</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-snowflake skill-icon"></i>
+                            <span class="skill-name">Snowflake</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">Cassandra</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line skill-icon"></i>
+                            <span class="skill-name">TensorFlow</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <span class="skill-name">PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot skill-icon"></i>
+                            <span class="skill-name">Scikit-learn</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-pie skill-icon"></i>
+                            <span class="skill-name">Pandas</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-calculator skill-icon"></i>
+                            <span class="skill-name">Numpy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud & Databases</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-aws skill-icon"></i>
+                            <span class="skill-name">AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-microsoft skill-icon"></i>
+                            <span class="skill-name">Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-warehouse skill-icon"></i>
+                            <span class="skill-name">Redshift</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-container">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>Diploma in Big Data Analytics</h3>
+                        <p>Center for Development of Advanced Computing (C-DAC), Hyderabad</p>
+                    </div>
+                    <div class="education-content">
+                        <p><i class="fas fa-calendar-alt"></i> 2023-24</p>
+                        <p><i class="fas fa-book"></i> Specialized in Big Data technologies and analytics</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>B-Tech in Electrical Engineering</h3>
+                        <p>Ashokrao Mane Group of Institution, Kolhapur</p>
+                    </div>
+                    <div class="education-content">
+                        <p><i class="fas fa-calendar-alt"></i> 2021-22</p>
+                        <p><i class="fas fa-microchip"></i> Focused on electrical systems and automation</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>Diploma in Electrical Engineering</h3>
+                        <p>Ashokrao Mane Polytechnic, Kolhapur</p>
+                    </div>
+                    <div class="education-content">
+                        <p><i class="fas fa-calendar-alt"></i> 2018-19</p>
+                        <p><i class="fas fa-bolt"></i> Fundamental electrical engineering studies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        Azure Associate Data Engineer (DP203) - Microsoft
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        Azure Data Fundamentals (DP900) - Microsoft
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        Data Engineering Professional Certificate - DeepLearning.AI
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        Machine Learning & Python - Internshala
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        MySQL Database Management - LearnVern
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        Atos Pre-Onboarding Training (4 months)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/omkar-khurd-98a631166" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:omkarkhurd7620@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+917387748890" class="social-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <p class="copyright">© 2024 Omkar Sunil Khurd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

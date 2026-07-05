@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omkar Khurd - Data Engineer</title>
+    <title>Omkar Khurd - AI Research Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
@@ -104,6 +104,15 @@
         .contact-item i {
             margin-right: 8px;
             font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
         }
         
         /* Navigation */
@@ -416,6 +425,19 @@
             margin-bottom: 20px;
             line-height: 1.6;
         }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 5px;
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
         
         .tech-stack {
             margin-top: 20px;
@@ -567,7 +589,7 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             display: flex;
             align-items: center;
-            max-width: 350px;
+            max-width: 380px;
         }
         
         .badge-icon {
@@ -716,10 +738,9 @@
     <!-- Header Section -->
     <header>
         <div class="container header-content">
-            <img src="/api/placeholder/400/400" alt="Omkar Khurd" class="profile-image">
             <div class="profile-text">
                 <h1>Omkar Sunil Khurd</h1>
-                <h2>Data Engineer</h2>
+                <h2>AI Research Engineer</h2>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -727,7 +748,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>omkarkhurd7620@gmail.com</span>
+                        <span><a href="mailto:omkarkhurd7620@gmail.com">omkarkhurd7620@gmail.com</a></span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -735,7 +756,15 @@
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/omkar-khurd-98a631166</span>
+                        <a href="https://in.linkedin.com/in/omkar-khurd-98a631166" target="_blank">linkedin.com/in/omkar-khurd-98a631166</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Omkar-74430" target="_blank">github.com/Omkar-74430</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://omkar-74430.github.io/Profilo/" target="_blank">omkar-74430.github.io/Profilo</a>
                     </div>
                 </div>
             </div>
@@ -753,6 +782,8 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#research">Research</a></li>
             </ul>
         </div>
     </nav>
@@ -763,20 +794,20 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a Data Engineer with hands-on experience in SQL, Python, and Machine Learning. My expertise lies in data processing, analysis, and NoSQL databases, with a passion for continuous learning and innovation.</p>
-                    <p>Throughout my career, I've designed and implemented data pipelines, managed database systems, and leveraged cloud technologies to optimize data workflows. I'm particularly interested in applying AI and machine learning techniques to solve complex data challenges.</p>
-                    <p>My goal is to contribute to forward-thinking organizations by applying my strong problem-solving skills and technical expertise to drive data-driven decision-making and innovation.</p>
+                    <p>AI Research Engineer with 2+ years of experience building production-grade AI applications, RAG and GAR (Graph Argument Retrieval) systems, AI agents, and enterprise automation platforms.</p>
+                    <p>Experienced in Python, MongoDB, LangChain/LlamaIndex, n8n Workflow, Transformers, and LLM evaluation — leveraging both internal server infrastructure and AWS Bedrock to design and ship scalable AI solutions.</p>
+                    <p>My goal is to push the boundaries of what's possible with generative AI — from parallel generation architectures and novel memory systems to fully autonomous multi-agent platforms — and deliver measurable research and business impact for every product I work on.</p>
                 </div>
                 <div class="key-skills">
                     <h3>Key Expertise</h3>
                     <ul>
-                        <li>Data Pipeline Design & Implementation</li>
-                        <li>NoSQL Database Management</li>
-                        <li>Machine Learning & AI Integration</li>
-                        <li>Big Data Technologies</li>
-                        <li>Cloud Computing (AWS, Azure)</li>
-                        <li>Data Warehousing & ETL/ELT</li>
-                        <li>Data Analysis & Visualization</li>
+                        <li>LLM Fine-Tuning (LoRA, QLoRA, PEFT)</li>
+                        <li>RAG & Graph-Based Retrieval (GAR)</li>
+                        <li>Multi-Agent AI Systems</li>
+                        <li>Prompt Engineering & LLM Evaluation</li>
+                        <li>Hybrid Vector Search & Semantic Retrieval</li>
+                        <li>AWS Bedrock & Cloud AI Platforms</li>
+                        <li>Agentic Workflow Automation (n8n)</li>
                     </ul>
                 </div>
             </div>
@@ -790,41 +821,29 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Data Engineer / Database Developer</h3>
-                        <h4>BostonLogix LLC, Hyderabad</h4>
-                        <div class="timeline-date">Mar 2024 - Present</div>
+                        <h3>Software Engineer (AI Research Engineer)</h3>
+                        <h4>BostonLogix LLP, Hyderabad</h4>
+                        <div class="timeline-date">April 2024 – Present</div>
                         <ul>
-                            <li>Worked on Oak Barrel product using MongoDB Atlas and Cassandra for efficient data management</li>
-                            <li>Designed and developed a chatbot for product information retrieval and user interaction</li>
-                            <li>Trained a custom Small Language Model (SLM) on proprietary datasets</li>
-                            <li>Implemented RAG approach for improved chatbot accuracy using embeddings and MongoDB</li>
-                            <li>Designed data pipelines with advanced modeling techniques for optimized workflows</li>
-                            <li>Utilized Snowflake for data warehousing with optimized storage and query performance</li>
+                            <li>Fine-tuned a Qwen3 8B-parameter LLM using PEFT — QLoRA and Prefix Tuning — for MongoDB aggregation query generation, improving query accuracy and integrating it into internal product workflows.</li>
+                            <li>Developed SpecSafe's Compliance & Anomaly Detection Engine using LLM-driven NLP to automate regulatory validation of food products against global standards (FDA, EU, FSSAI), cutting manual compliance review time by ~70% on AWS infrastructure.</li>
+                            <li>Implemented a hybrid object recommendation system for SpecSafe, combining ML ranking with vector similarity search, increasing recommendation relevance by ~93% and reducing false matches in business object mapping workflows.</li>
+                            <li>Developed a multi-agent Template Generation system using n8n as backend that converts user requirements and Excel references into structured UI templates, incorporating an AI-generated implementation plan with a human-in-the-loop approval workflow, reducing template creation time by ~90%.</li>
+                            <li>Developing the SpecSafe AI Assistant that converts natural language requests into executable system tasks using a multi-agentic system and multi-step operations, reducing manual configuration effort by ~40% for end users — implementing prompt versioning, model inference, tool calling, and API integration.</li>
+                            <li>Built RAG and Graph retrieval pipelines implementing hybrid search (dense + sparse), re-ranking strategies, and chunking optimizations, improving retrieval precision by ~30% across document search workflows.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Data Engineer Intern</h3>
-                        <h4>Atos Syntel Pvt. Ltd, Pune</h4>
-                        <div class="timeline-date">Feb 2022 - 2023</div>
+                        <h3>Machine Learning Intern</h3>
+                        <h4>Internshala Pvt. Ltd.</h4>
+                        <div class="timeline-date">May 2020 – 2021</div>
                         <ul>
-                            <li>Designed and implemented data pipelines for efficient data storage and processing</li>
-                            <li>Built and maintained company's data infrastructure for accurate and timely data availability</li>
-                            <li>Ensured reliable delivery, loading, and transformation of data from multiple sources</li>
-                            <li>Collaborated with data analysts to design data pipelines aligned with business goals</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Paid Internship</h3>
-                        <h4>Internshala Pvt. Ltd, Delhi</h4>
-                        <div class="timeline-date">May 2020 - 2021</div>
-                        <ul>
-                            <li>Worked on Machine Learning projects</li>
-                            <li>Gained training in ML fundamentals including data exploration and preprocessing</li>
-                            <li>Developed skills in Linear Regression, Dimensionality Reduction, and other ML techniques</li>
+                            <li>Developed and deployed supervised and unsupervised machine learning models, including Linear Regression, Logistic Regression, Decision Trees, and Clustering, to solve real-world business problems.</li>
+                            <li>Conducted comprehensive data exploration and preprocessing — handling missing values, feature engineering, and data normalization to improve model accuracy.</li>
+                            <li>Collaborated with a team to design and evaluate ensemble models, optimizing predictive performance through bagging and boosting techniques.</li>
+                            <li>Utilized Python and relevant libraries (Pandas, Scikit-learn, Matplotlib) for end-to-end implementation, visualization, and reporting.</li>
                         </ul>
                     </div>
                 </div>
@@ -843,7 +862,8 @@
                     </div>
                     <div class="project-content">
                         <h3>ExtractAI – AI Search Engine</h3>
-                        <p>Built an AI-powered search engine similar to Perplexity, enabling intelligent question-answering and knowledge retrieval from structured and unstructured data.</p>
+                        <p>Built an LLM-grounded search engine enabling intelligent question-answering and knowledge retrieval from structured and unstructured data. Helps businesses extract insights from internal documents, reducing manual data analysis effort.</p>
+                        <a href="https://www.linkedin.com/posts/omkar-khurd-98a631166_ai-knowledgeextraction-websearchai-activity-7317620356758786049-6kDI" target="_blank" class="project-link"><i class="fab fa-linkedin"></i> View on LinkedIn</a>
                         <div class="tech-stack">
                             <h4>Tech Stack:</h4>
                             <div class="tech-tags">
@@ -852,25 +872,25 @@
                                 <span class="tech-tag">LLMs</span>
                                 <span class="tech-tag">RAG</span>
                                 <span class="tech-tag">Ollama</span>
-                                <span class="tech-tag">DeepSeek R1</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-card ai-tool">
                     <div class="project-image">
-                        <i class="fas fa-headset project-icon"></i>
+                        <i class="fas fa-calendar-check project-icon"></i>
                     </div>
                     <div class="project-content">
-                        <h3>BackCall Data Engineering</h3>
-                        <p>Developed an AI-based call transcription and analysis system to process conversational audio files and extract structured insights for customer service improvement.</p>
+                        <h3>SmartScheduler – AI-Powered Scheduling Assistant</h3>
+                        <p>Built an AI-driven smart scheduling platform that automates meeting creation, calendar coordination, and reminder workflows for individuals and teams. Designed and integrated backend services (APIs, database, authentication) to manage users, events, and organization-level configurations.</p>
+                        <a href="https://smartscheduler.genintai.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         <div class="tech-stack">
                             <h4>Tech Stack:</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">Speech-to-Text ML</span>
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">Agentic AI</span>
                             </div>
                         </div>
                     </div>
@@ -880,15 +900,34 @@
                         <i class="fas fa-robot project-icon"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Custom NoSQL AI Chatbot</h3>
-                        <p>Built a custom AI chatbot using embeddings to answer human-like queries based on MongoDB aggregation results without relying on pre-trained models.</p>
+                        <h3>Prompt-into-Function (PIF) AI Chatbot</h3>
+                        <p>Architected a natural language to action system for Recipe Builder that converts plain language requests into executable multi-step system tasks, reducing manual configuration effort by ~80% for non-technical users.</p>
                         <div class="tech-stack">
                             <h4>Tech Stack:</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Vector Embeddings</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">Function Calling</span>
                                 <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card ai-tool">
+                    <div class="project-image">
+                        <i class="fas fa-file-alt project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Document Search RAG Platform</h3>
+                        <p>Built a RAG-based document search platform for SpecSafe integrating n8n workflows with Amazon Bedrock and Google BigQuery, enabling context-aware Q&A over large-scale PDFs and Excel documents for compliance teams.</p>
+                        <div class="tech-stack">
+                            <h4>Tech Stack:</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Amazon Bedrock</span>
+                                <span class="tech-tag">n8n</span>
+                                <span class="tech-tag">Google BigQuery</span>
                                 <span class="tech-tag">RAG</span>
+                                <span class="tech-tag">Vector DB</span>
                             </div>
                         </div>
                     </div>
@@ -896,7 +935,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Projects Section -->
     <section id="projects" style="background-color: #f8f9fa;">
         <div class="container">
@@ -907,8 +946,9 @@
                         <i class="fas fa-tshirt project-icon"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Fabric Authentication System</h3>
+                        <h3>Fabric Authentication System Using Deep Learning</h3>
                         <p>Developed a deep learning system to distinguish between handmade and machine-made fabrics, essential for textile industry authentication.</p>
+                        <a href="https://github.com/Omkar-74430/Fabric-Authentication-System-using-Deep-Learning.git" target="_blank" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
                         <div class="tech-stack">
                             <h4>Tech Stack:</h4>
                             <div class="tech-tags">
@@ -922,40 +962,38 @@
                 </div>
                 <div class="project-card project">
                     <div class="project-image">
-                        <i class="fas fa-chart-line project-icon"></i>
+                        <i class="fas fa-shield-alt project-icon"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Stock Market Data Analysis</h3>
-                        <p>Analyzed and predicted stock market trends using historical data to guide investment decisions with machine learning models.</p>
+                        <h3>SpecSafe Compliance & Anomaly Detection Engine</h3>
+                        <p>Engineered an LLM-driven NLP engine to automate regulatory validation of food products against global standards (FDA, EU, FSSAI), cutting manual compliance review time by ~70% on AWS infrastructure.</p>
                         <div class="tech-stack">
                             <h4>Tech Stack:</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">Numpy</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">Scikit-learn</span>
-                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-card project">
                     <div class="project-image">
-                        <i class="fas fa-baseball-ball project-icon"></i>
+                        <i class="fas fa-database project-icon"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Cricket Pipeline</h3>
-                        <p>Developed a fully automated data pipeline to extract cricket data from the web, process real-time streams, and generate AI-driven match summaries.</p>
+                        <h3>8B-Parameter LLM for MongoDB Query Generation</h3>
+                        <p>Fine-tuned an 8B-parameter open-source LLM (using LoRA/PEFT) to generate accurate MongoDB aggregation queries from natural language, improving query accuracy by ~95% and reducing manual query writing time by 90%.</p>
                         <div class="tech-stack">
                             <h4>Tech Stack:</h4>
                             <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">BeautifulSoup</span>
-                                <span class="tech-tag">Apache Flink</span>
-                                <span class="tech-tag">Snowflake</span>
-                                <span class="tech-tag">Apache Airflow</span>
-                                <span class="tech-tag">SLM</span>
-                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">LLaMA 3</span>
+                                <span class="tech-tag">LoRA / PEFT</span>
+                                <span class="tech-tag">Hugging Face</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">PyTorch</span>
                             </div>
                         </div>
                     </div>
@@ -963,14 +1001,14 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skills-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <h3><i class="fas fa-code"></i> Programming & Development</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
                             <i class="fab fa-python skill-icon"></i>
@@ -981,62 +1019,151 @@
                             <span class="skill-name">SQL</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-database skill-icon"></i>
-                            <span class="skill-name">MQL</span>
+                            <i class="fas fa-plug skill-icon"></i>
+                            <span class="skill-name">FastAPI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-exchange-alt skill-icon"></i>
+                            <span class="skill-name">REST APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check-double skill-icon"></i>
+                            <span class="skill-name">Pydantic</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sync-alt skill-icon"></i>
+                            <span class="skill-name">Async Programming</span>
                         </div>
                     </div>
                 </div>
                 <div class="skills-category">
-                    <h3><i class="fas fa-server"></i> Big Data Technologies</h3>
+                    <h3><i class="fas fa-robot"></i> GenAI & LLM Engineering</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <i class="fas fa-database skill-icon"></i>
-                            <span class="skill-name">Hadoop</span>
+                            <i class="fas fa-sliders-h skill-icon"></i>
+                            <span class="skill-name">LLM Fine-Tuning (LoRA / PEFT)</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-bolt skill-icon"></i>
-                            <span class="skill-name">Spark</span>
+                            <i class="fas fa-comment-dots skill-icon"></i>
+                            <span class="skill-name">Prompt Engineering</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-file-search skill-icon"></i>
+                            <span class="skill-name">RAG Architecture</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sitemap skill-icon"></i>
+                            <span class="skill-name">Multi-Agent Systems</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tools skill-icon"></i>
+                            <span class="skill-name">Function Calling</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar skill-icon"></i>
+                            <span class="skill-name">LLM Evaluation & Guardrails</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-stream skill-icon"></i>
-                            <span class="skill-name">Flink</span>
+                            <span class="skill-name">Context Window Optimization</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-wind skill-icon"></i>
-                            <span class="skill-name">Airflow</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-snowflake skill-icon"></i>
-                            <span class="skill-name">Snowflake</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database skill-icon"></i>
-                            <span class="skill-name">Cassandra</span>
+                            <i class="fas fa-code-branch skill-icon"></i>
+                            <span class="skill-name">Structured Output Generation</span>
                         </div>
                     </div>
                 </div>
                 <div class="skills-category">
-                    <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <h3><i class="fas fa-brain"></i> Frameworks & Models</h3>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <i class="fas fa-chart-line skill-icon"></i>
-                            <span class="skill-name">TensorFlow</span>
+                            <i class="fas fa-link skill-icon"></i>
+                            <span class="skill-name">LangChain</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <i class="fas fa-layer-group skill-icon"></i>
+                            <span class="skill-name">LlamaIndex</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-face-smile skill-icon"></i>
+                            <span class="skill-name">Hugging Face</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire skill-icon"></i>
                             <span class="skill-name">PyTorch</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-robot skill-icon"></i>
+                            <span class="skill-name">LLaMA 2/3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-wind skill-icon"></i>
+                            <span class="skill-name">Mistral</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal skill-icon"></i>
+                            <span class="skill-name">CodeLlama</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain skill-icon"></i>
+                            <span class="skill-name">GPT-3.5 / 4 (OpenAI)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws skill-icon"></i>
+                            <span class="skill-name">Amazon Titan (Bedrock)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line skill-icon"></i>
+                            <span class="skill-name">XGBoost / LightGBM</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs skill-icon"></i>
                             <span class="skill-name">Scikit-learn</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-chart-pie skill-icon"></i>
-                            <span class="skill-name">Pandas</span>
+                            <i class="fas fa-flask skill-icon"></i>
+                            <span class="skill-name">MLflow</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-vector-square"></i> Vector Search & Retrieval</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <span class="skill-name">Embedding Models</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-calculator skill-icon"></i>
-                            <span class="skill-name">Numpy</span>
+                            <i class="fas fa-search skill-icon"></i>
+                            <span class="skill-name">Semantic Search</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-random skill-icon"></i>
+                            <span class="skill-name">Hybrid Search (Dense + Sparse)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">Qdrant</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">FAISS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cut skill-icon"></i>
+                            <span class="skill-name">Chunking Strategies</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-sort-amount-down skill-icon"></i>
+                            <span class="skill-name">Re-ranking Strategies</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-diagram-project skill-icon"></i>
+                            <span class="skill-name">Neo4j / Knowledge Graphs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-share-nodes skill-icon"></i>
+                            <span class="skill-name">Graph-Based Retrieval</span>
                         </div>
                     </div>
                 </div>
@@ -1045,11 +1172,11 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <i class="fab fa-aws skill-icon"></i>
-                            <span class="skill-name">AWS</span>
+                            <span class="skill-name">AWS (Bedrock, EC2, S3, Lambda)</span>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-microsoft skill-icon"></i>
-                            <span class="skill-name">Azure</span>
+                            <i class="fab fa-google skill-icon"></i>
+                            <span class="skill-name">GCP (BigQuery)</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-database skill-icon"></i>
@@ -1057,11 +1184,44 @@
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-database skill-icon"></i>
-                            <span class="skill-name">PostgreSQL</span>
+                            <span class="skill-name">ChromaDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon"></i>
+                            <span class="skill-name">Qdrant</span>
                         </div>
                         <div class="skill-item">
                             <i class="fas fa-warehouse skill-icon"></i>
-                            <span class="skill-name">Redshift</span>
+                            <span class="skill-name">Google BigQuery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3><i class="fas fa-network-wired"></i> AI System Architecture & DevOps</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram skill-icon"></i>
+                            <span class="skill-name">Agentic Workflows (n8n)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-user-check skill-icon"></i>
+                            <span class="skill-name">Human-in-the-Loop (HITL)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-microchip skill-icon"></i>
+                            <span class="skill-name">Microservices AI Architecture</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker skill-icon"></i>
+                            <span class="skill-name">Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code-branch skill-icon"></i>
+                            <span class="skill-name">CI/CD Pipelines</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github skill-icon"></i>
+                            <span class="skill-name">Git & GitHub</span>
                         </div>
                     </div>
                 </div>
@@ -1081,7 +1241,7 @@
                     </div>
                     <div class="education-content">
                         <p><i class="fas fa-calendar-alt"></i> 2023-24</p>
-                        <p><i class="fas fa-book"></i> Specialized in Big Data technologies and analytics</p>
+                        <p><i class="fas fa-book"></i> Big Data technologies and analytics</p>
                     </div>
                 </div>
                 <div class="education-card">
@@ -1090,8 +1250,8 @@
                         <p>Ashokrao Mane Group of Institution, Kolhapur</p>
                     </div>
                     <div class="education-content">
-                        <p><i class="fas fa-calendar-alt"></i> 2021-22</p>
-                        <p><i class="fas fa-microchip"></i> Focused on electrical systems and automation</p>
+                        <p><i class="fas fa-calendar-alt"></i> 2019-22</p>
+                        <p><i class="fas fa-microchip"></i> Advanced electrical engineering</p>
                     </div>
                 </div>
                 <div class="education-card">
@@ -1100,7 +1260,7 @@
                         <p>Ashokrao Mane Polytechnic, Kolhapur</p>
                     </div>
                     <div class="education-content">
-                        <p><i class="fas fa-calendar-alt"></i> 2018-19</p>
+                        <p><i class="fas fa-calendar-alt"></i> 2016-19</p>
                         <p><i class="fas fa-bolt"></i> Fundamental electrical engineering studies</p>
                     </div>
                 </div>
@@ -1118,7 +1278,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="badge-text">
-                        Azure Associate Data Engineer (DP203) - Microsoft
+                        IBM Data Science – Coursera
                     </div>
                 </div>
                 <div class="certification-badge">
@@ -1126,7 +1286,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="badge-text">
-                        Azure Data Fundamentals (DP900) - Microsoft
+                        Project Management – Google Coursera
                     </div>
                 </div>
                 <div class="certification-badge">
@@ -1134,7 +1294,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="badge-text">
-                        Data Engineering Professional Certificate - DeepLearning.AI
+                        Machine Learning & Python – Internshala
                     </div>
                 </div>
                 <div class="certification-badge">
@@ -1142,7 +1302,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="badge-text">
-                        Machine Learning & Python - Internshala
+                        Associate Data Engineer – Microsoft (Coursera)
                     </div>
                 </div>
                 <div class="certification-badge">
@@ -1150,7 +1310,7 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="badge-text">
-                        MySQL Database Management - LearnVern
+                        Cloud Computing – Azure Microsoft, AWS (Coursera)
                     </div>
                 </div>
                 <div class="certification-badge">
@@ -1158,7 +1318,76 @@
                         <i class="fas fa-certificate"></i>
                     </div>
                     <div class="badge-text">
-                        Atos Pre-Onboarding Training (4 months)
+                        Azure Data Fundamentals (DP900) – Microsoft
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="badge-text">
+                        DeepLearning.AI Data Engineering Professional Certificate – AWS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="certifications-container">
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="badge-text">
+                        <a href="https://huggingface.co/datasets/Om-7387/Marathi-OCR" target="_blank" style="color: var(--dark); text-decoration: none;">Open-Sourced Marathi OCR Dataset on Hugging Face</a>
+                    </div>
+                </div>
+                <div class="certification-badge">
+                    <div class="badge-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="badge-text">
+                        <a href="https://huggingface.co/Om-7387/Hindi_Tokenizer" target="_blank" style="color: var(--dark); text-decoration: none;">Open-Sourced Hindi Tokenizer on Hugging Face</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            <div class="projects-grid">
+                <div class="project-card project">
+                    <div class="project-image">
+                        <i class="fas fa-atom project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Non-Autoregressive Parallel Generative Transformer</h3>
+                        <p>Exploring parallel token generation architectures as an alternative to autoregressive decoding, aiming to improve inference speed without sacrificing output quality.</p>
+                    </div>
+                </div>
+                <div class="project-card project">
+                    <div class="project-image">
+                        <i class="fas fa-dna project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>LLM Memory Management – KV Cache to DNA Structure</h3>
+                        <p>Investigating DNA-inspired structural encoding as a novel approach to long-context memory management, aiming to move beyond traditional KV cache limitations.</p>
+                    </div>
+                </div>
+                <div class="project-card project">
+                    <div class="project-image">
+                        <i class="fas fa-project-diagram project-icon"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vector-less Memory Architecture – GAR (Graph Argument Retrieval)</h3>
+                        <p>Designing a graph-based retrieval architecture as an alternative to traditional vector-store retrieval, structuring knowledge as connected arguments rather than embeddings.</p>
                     </div>
                 </div>
             </div>
@@ -1169,7 +1398,7 @@
     <footer>
         <div class="footer-container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/omkar-khurd-98a631166" class="social-link" target="_blank">
+                <a href="https://in.linkedin.com/in/omkar-khurd-98a631166" class="social-link" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="mailto:omkarkhurd7620@gmail.com" class="social-link">
@@ -1178,9 +1407,16 @@
                 <a href="tel:+917387748890" class="social-link">
                     <i class="fas fa-phone"></i>
                 </a>
+                <a href="https://github.com/Omkar-74430" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://omkar-74430.github.io/Profilo/" class="social-link" target="_blank">
+                    <i class="fas fa-globe"></i>
+                </a>
             </div>
-            <p class="copyright">© 2024 Omkar Sunil Khurd. All rights reserved.</p>
+            <p class="copyright">© 2025 Omkar Sunil Khurd – AI Research Engineer</p>
         </div>
     </footer>
+
 </body>
 </html>
